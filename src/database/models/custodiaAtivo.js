@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes) => {
     codAtivo: { type: DataTypes.INTEGER, primaryKey: true },
     codCliente: { type: DataTypes.INTEGER, primaryKey: true },
     qtdAtivo: DataTypes.INTEGER,
-    valor: DataTypes.INTEGER,
+    valorCompra: DataTypes.INTEGER,
   }, {
     timestamps: false,
     modelName: 'CustodiaAtivo',

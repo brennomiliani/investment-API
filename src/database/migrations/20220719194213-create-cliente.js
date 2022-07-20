@@ -13,14 +13,14 @@ module.exports = {
       },
       cpf: {
         allowNull: false,
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
       },
       saldo: {
         allowNull: false,
         type: Sequelize.INTEGER,
       },
       contaSaque: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
       },
       bancoSaque: {
         type: Sequelize.STRING,

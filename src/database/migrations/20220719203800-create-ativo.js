@@ -11,6 +11,10 @@ module.exports = {
         allowNull: false,
         type: Sequelize.INTEGER,
       },
+      preco: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+      },
       nome: {
         allowNull: false,
         type: Sequelize.STRING,

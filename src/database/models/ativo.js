@@ -6,6 +6,7 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true,
     },
     qtdAtivo: DataTypes.INTEGER,
+    preco: DataTypes.INTEGER,
     nome: DataTypes.STRING,
   }, {
     timestamps: false,

@@ -6,9 +6,9 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true,
     },
     nome: DataTypes.STRING,
-    cpf: DataTypes.INTEGER,
+    cpf: DataTypes.STRING,
     saldo: DataTypes.INTEGER,
-    contaSaque: DataTypes.INTEGER,
+    contaSaque: DataTypes.STRING,
     bancoSaque: DataTypes.STRING,
   }, {
     timestamps: false,

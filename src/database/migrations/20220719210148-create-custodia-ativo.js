@@ -24,7 +24,7 @@ module.exports = {
       qtdAtivo: {
         type: Sequelize.INTEGER,
       },
-      valor: {
+      valorCompra: {
         type: Sequelize.INTEGER,
       },
     });
