@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     nome: DataTypes.STRING,
     cpf: DataTypes.STRING,
-    saldo: DataTypes.INTEGER,
+    saldo: DataTypes.FLOAT,
     contaSaque: DataTypes.STRING,
     bancoSaque: DataTypes.STRING,
   }, {

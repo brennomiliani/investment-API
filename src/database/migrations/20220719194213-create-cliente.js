@@ -17,7 +17,7 @@ module.exports = {
       },
       saldo: {
         allowNull: false,
-        type: Sequelize.INTEGER,
+        type: Sequelize.FLOAT,
       },
       contaSaque: {
         type: Sequelize.STRING,

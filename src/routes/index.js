@@ -1,8 +1,8 @@
-import express from 'express';
-import contaRoutes from './contaRoutes';
+const express = require('express');
+const contaRoutes = require('./contaRoutes');
 
 const routes = express.Router();
 
 routes.use('/conta', contaRoutes);
 
-export default routes;
+module.exports = routes;

@@ -1,15 +1,8 @@
-import express from 'express';
-import {
-  ReasonPhrases,
-  StatusCodes,
-  getReasonPhrase,
-  getStatusCode,
-} from 'http-status-codes';
+const express = require('express');
+const { saque } = require('../controllers/contaController');
 
 const contaRoutes = express.Router();
 
-contaRoutes.get('/saque', (req, res) => {
-  res.status(StatusCodes.OK).send(ReasonPhrases.OK);
-});
+contaRoutes.get('/saque', saque);
 
-export default contaRoutes;
+module.exports = contaRoutes;
