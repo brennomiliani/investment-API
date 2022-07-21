@@ -1,13 +1,13 @@
-const { CustodiaAtivo } = require('../database/models');
+const { CustodiaAtivo, Ativo } = require('../database/models');
 
 const getByClient = async ({ codCliente }) => {
-  const cliente = await CustodiaAtivo.findAll({ where: { codCliente } });
-  return cliente;
+  const client = await CustodiaAtivo.findAll({ where: { codCliente } });
+  return client;
 };
 
 const getByAssets = async ({ codAtivo }) => {
-  const ativo = await CustodiaAtivo.findAll({ where: { codAtivo } });
-  return ativo;
+  const stock = await Ativo.findOne({ where: { codAtivo } });
+  return stock;
 };
 
 module.exports = {

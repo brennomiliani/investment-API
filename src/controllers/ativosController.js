@@ -11,8 +11,9 @@ const getByClient = async (req, res) => {
   res.status(StatusCodes.OK).json(clientStocks);
 };
 
-const getByAssets = (req, res) => {
-
+const getByAssets = async (req, res) => {
+  const stocks = await ativosService.getByAssets(req.params);
+  res.status(StatusCodes.OK).json(stocks);
 };
 
 module.exports = {
