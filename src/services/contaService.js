@@ -1,20 +1,27 @@
 const { Cliente } = require('../database/models');
 
-const saque = async ({ codCliente, valor }) => {
+const getCliente = async ({ codCliente }) => {
   const cliente = await Cliente.findOne({ where: { codCliente } });
-  console.log(cliente);
+  return cliente;
+};
 
-  const newValor = 50;
+const saqueOuDeposito = async ({ codCliente, valor }, type) => {
+  const { saldo } = await getCliente({ codCliente });
+  let newSaldo = 0;
 
-  await Cliente.update({ saldo: newValor }, {
+  if (type === 'deposito') newSaldo = saldo + valor;
+  if (type === 'saque') newSaldo = saldo - valor;
+
+  await Cliente.update({ saldo: newSaldo }, {
     where: {
       codCliente,
     },
   });
 
-  return newValor;
+  return newSaldo;
 };
 
 module.exports = {
-  saque,
+  saqueOuDeposito,
+  getCliente,
 };

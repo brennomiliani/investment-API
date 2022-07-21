@@ -1,8 +1,11 @@
 const express = require('express');
-const { saque } = require('../controllers/contaController');
+const { saque, deposito, getCliente } = require('../controllers/contaController');
 
 const contaRoutes = express.Router();
 
-contaRoutes.get('/saque', saque);
+// todos os endpoints abaixo contem /conta antes
+contaRoutes.post('/saque', saque);
+contaRoutes.post('/deposito', deposito);
+contaRoutes.get('/:codCliente', getCliente);
 
 module.exports = contaRoutes;
