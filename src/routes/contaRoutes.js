@@ -1,6 +1,6 @@
 const express = require('express');
 const { saque, deposito, getCliente } = require('../controllers/contaController');
-const verifyTransaction = require('../middlewares/verifyDeposit');
+const verifyTransaction = require('../middlewares/verifyTransaction');
 
 const contaRoutes = express.Router();
 
