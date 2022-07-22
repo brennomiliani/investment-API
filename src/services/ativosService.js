@@ -15,8 +15,22 @@ const getByClientAndAssets = async ({ codCliente, codAtivo }) => {
   return clientAssets;
 };
 
+const updateAssets = async (codAtivo, qtdAlter, type) => {
+  const { qtdAtivo } = await getByAssets({ codAtivo });
+  let newQtd;
+  if (type === 'compra') newQtd = qtdAtivo - qtdAlter;
+  if (type === 'venda') newQtd = qtdAtivo + qtdAlter;
+
+  await Ativo.update({ qtdAtivo: newQtd }, {
+    where: {
+      codAtivo,
+    },
+  });
+};
+
 module.exports = {
   getByClient,
   getByAssets,
   getByClientAndAssets,
+  updateAssets,
 };

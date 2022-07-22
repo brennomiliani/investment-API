@@ -5,7 +5,7 @@ const {
   getStatusCode,
 } = require('http-status-codes');
 const { Cliente, CustodiaAtivo } = require('../database/models');
-const { getByAssets, getByClientAndAssets } = require('./ativosService');
+const { getByAssets, getByClientAndAssets, updateAssets } = require('./ativosService');
 const { getCliente } = require('./contaService');
 
 const comprar = async ({ codCliente, codAtivo, qtdAtivo }) => {
@@ -40,11 +40,14 @@ const comprar = async ({ codCliente, codAtivo, qtdAtivo }) => {
     });
   }
 
+  // atualiza qtdAtivo na tabela de ativos
+  await updateAssets(codAtivo, qtdAtivo, 'compra');
+
   return { status: StatusCodes.OK, message: 'Compra realizada!' };
 };
 
 const vender = async ({ codCliente, codAtivo, qtdAtivo }) => {
-  // verifica a quantidade a ser vendida é maior que a quantidade na carteira
+  // verifica se a quantidade a ser vendida é maior que a quantidade na carteira
   const clientAssets = await getByClientAndAssets({ codCliente, codAtivo });
   if (!clientAssets) return { status: StatusCodes.BAD_REQUEST, message: 'CodAtivo inválido' };
   if (qtdAtivo > clientAssets.qtdAtivo) return { status: StatusCodes.BAD_REQUEST, message: 'Quantidade indisponível para venda' };
@@ -68,7 +71,9 @@ const vender = async ({ codCliente, codAtivo, qtdAtivo }) => {
     qtdAtivo: newQtd,
   }, { where: { codCliente, codAtivo } });
 
-  return { status: StatusCodes.OK, message: 'Compra realizada!' };
+  await updateAssets(codAtivo, qtdAtivo, 'venda');
+
+  return { status: StatusCodes.OK, message: 'Venda realizada!' };
 };
 
 module.exports = {
