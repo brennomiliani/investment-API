@@ -8,7 +8,7 @@ const getCliente = async ({ codCliente }) => {
 
 const saqueOuDeposito = async ({ codCliente, valor }, type) => {
   const cliente = await getCliente({ codCliente });
-  if (!cliente) throw new HttpException(400, 'Usuário não existe');
+  if (!cliente) throw new HttpException(404, 'Usuário não encontrado');
   const { saldo } = cliente;
   let newSaldo = 0;
 
