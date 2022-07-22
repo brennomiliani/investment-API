@@ -16,7 +16,13 @@ const getByAssets = async (req, res) => {
   res.status(StatusCodes.OK).json(stocks);
 };
 
+const getAllAssetsAndQuantity = async (req, res) => {
+  const stocks = await ativosService.getAllAssetsAndQuantity();
+  res.status(StatusCodes.OK).json(stocks);
+};
+
 module.exports = {
   getByClient,
   getByAssets,
+  getAllAssetsAndQuantity,
 };
