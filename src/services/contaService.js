@@ -1,5 +1,5 @@
 const { Cliente } = require('../database/models');
-const HttpException = require('../shared/httpExeption');
+const HttpException = require('../shared/httpException');
 
 const getCliente = async ({ codCliente }) => {
   const cliente = await Cliente.findOne({ where: { codCliente } });

@@ -1,5 +1,5 @@
 const Joi = require('joi');
-const HttpException = require('../shared/httpExeption');
+const HttpException = require('../shared/httpException');
 
 const transactionSchema = Joi.object({
   codCliente: Joi.number().required(),

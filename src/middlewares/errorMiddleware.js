@@ -1,4 +1,4 @@
-const HttpException = require('../shared/httpExeption');
+const HttpException = require('../shared/httpException');
 
 const httpErrorMiddleware = (err, req, res, _next) => {
   const { status, message } = err;
