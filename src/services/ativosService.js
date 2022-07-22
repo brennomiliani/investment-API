@@ -10,7 +10,13 @@ const getByAssets = async ({ codAtivo }) => {
   return stock;
 };
 
+const getByClientAndAssets = async ({ codCliente, codAtivo }) => {
+  const [clientAssets] = await CustodiaAtivo.findAll({ where: { codCliente, codAtivo } });
+  return clientAssets;
+};
+
 module.exports = {
   getByClient,
   getByAssets,
+  getByClientAndAssets,
 };
