@@ -2,7 +2,13 @@ const { CustodiaAtivo, Ativo } = require('../database/models');
 
 const getByClient = async ({ codCliente }) => {
   const client = await CustodiaAtivo.findAll({ where: { codCliente } });
-  return client;
+  const result = client.map((custodia) => ({
+    codCliente: custodia.codCliente,
+    codAtivo: custodia.codAtivo,
+    qtdeAtivo: custodia.qtdAtivo,
+    valor: custodia.valorCompra,
+  }));
+  return result;
 };
 
 const getByAssets = async ({ codAtivo }) => {
