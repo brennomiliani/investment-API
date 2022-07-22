@@ -5,6 +5,7 @@ const {
   getStatusCode,
 } = require('http-status-codes');
 const { Cliente, CustodiaAtivo } = require('../database/models');
+const precoMedio = require('../utils/precoMedio');
 const { getByAssets, getByClientAndAssets, updateAssets } = require('./ativosService');
 const { getCliente } = require('./contaService');
 
@@ -29,9 +30,13 @@ const comprar = async ({ codCliente, codAtivo, qtdAtivo }) => {
   // cria ou adiciona a custodia do ativo para o cliente
   const clientAssets = await getByClientAndAssets({ codCliente, codAtivo });
   if (clientAssets) {
+    // faz o preco médio da carteira
     const newQtd = clientAssets.qtdAtivo + qtdAtivo;
+    const montanteEmCarteira = clientAssets.qtdAtivo * clientAssets.valorCompra;
+    const valorCompra = stock.preco * qtdAtivo;
+    const preco = precoMedio(montanteEmCarteira, valorCompra, newQtd);
     await CustodiaAtivo.update({
-      qtdAtivo: newQtd, valorCompra: stock.preco,
+      qtdAtivo: newQtd, valorCompra: preco,
     }, { where: { codCliente, codAtivo } });
   }
   if (!clientAssets) {
