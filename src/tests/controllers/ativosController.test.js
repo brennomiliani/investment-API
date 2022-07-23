@@ -3,7 +3,7 @@ const sinon = require('sinon');
 const { expect } = require('chai');
 const ativosService = require('../../services/ativosService');
 const ativosController = require('../../controllers/ativosController');
-const { ativo, getByClientData, allAtivos } = require('../mock/models/mockAtivos');
+const { ativo, getByClientData, allAtivos } = require('../mock/mockAtivos');
 
 describe('testing controller layer for ativos', () => {
   describe('testing GET /ativos/cliente/:codCliente', () => {
@@ -78,7 +78,7 @@ describe('testing controller layer for ativos', () => {
       ativosService.getAllAssetsAndQuantity.restore();
     });
 
-    it('expect to return status 200 and the data for the codAtivo', async () => {
+    it('expect to return status 200 and the data for all ativos', async () => {
       await ativosController.getAllAssetsAndQuantity(request, response);
       expect(response.status.calledWith(200)).to.be.equal(true);
       expect(response.json.calledWith(allAtivos)).to.be.equal(true);
