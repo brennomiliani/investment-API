@@ -6,7 +6,7 @@ const {
 } = require('sequelize-test-helpers');
 const Cliente = require('../../database/models/cliente');
 
-describe('test model Ativo', () => {
+describe('test model Cliente', () => {
   describe('Cliente model name and properties', () => {
     const Model = Cliente(sequelize, dataTypes);
     const instance = new Model();
