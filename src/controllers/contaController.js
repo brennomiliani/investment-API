@@ -1,8 +1,5 @@
 const {
-  ReasonPhrases,
   StatusCodes,
-  getReasonPhrase,
-  getStatusCode,
 } = require('http-status-codes');
 const contaService = require('../services/contaService');
 

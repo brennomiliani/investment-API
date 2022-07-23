@@ -1,8 +1,5 @@
 const {
-  ReasonPhrases,
   StatusCodes,
-  getReasonPhrase,
-  getStatusCode,
 } = require('http-status-codes');
 const { Cliente, CustodiaAtivo } = require('../database/models');
 const precoMedio = require('../utils/precoMedio');

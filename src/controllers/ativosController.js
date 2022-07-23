@@ -1,8 +1,5 @@
 const {
-  ReasonPhrases,
   StatusCodes,
-  getReasonPhrase,
-  getStatusCode,
 } = require('http-status-codes');
 const ativosService = require('../services/ativosService');
 const HttpException = require('../shared/httpException');
