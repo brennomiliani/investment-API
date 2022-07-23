@@ -23,4 +23,20 @@ describe('testing service layer for ativos', () => {
       expect(client).to.be.deep.equal(getByClientData);
     });
   });
+
+  describe('finding ativo with a certain codAtivo', () => {
+    before(() => {
+      sinon.stub(Ativo, 'findOne').resolves(ativo);
+    });
+
+    after(() => {
+      Ativo.findOne.restore();
+    });
+
+    it('expect to return an object of the ativo', async () => {
+      const stock = await ativosService.getByAssets({ codAtivo: 1 });
+      expect(stock).to.be.an('object');
+      expect(stock).to.be.equal(stock);
+    });
+  });
 });
