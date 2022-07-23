@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 const sinon = require('sinon');
 const { expect } = require('chai');
 const { CustodiaAtivo, Ativo } = require('../../database/models');
