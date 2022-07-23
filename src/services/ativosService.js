@@ -5,7 +5,7 @@ const getByClient = async ({ codCliente }) => {
   const result = client.map((custodia) => ({
     codCliente: custodia.codCliente,
     codAtivo: custodia.codAtivo,
-    qtdeAtivo: custodia.qtdAtivo,
+    qtdAtivo: custodia.qtdAtivo,
     valor: custodia.valorCompra,
   }));
   return result;

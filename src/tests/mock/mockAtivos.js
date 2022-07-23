@@ -30,14 +30,29 @@ const getByClientData = [
   {
     codCliente: 1,
     codAtivo: 1,
-    qtdeAtivo: 100,
+    qtdAtivo: 100,
     valor: 98.87,
   },
   {
     codCliente: 1,
     codAtivo: 2,
-    qtdeAtivo: 100,
+    qtdAtivo: 100,
     valor: 34.66,
+  },
+];
+
+const modelClientData = [
+  {
+    codAtivo: 1,
+    codCliente: 1,
+    qtdAtivo: 100,
+    valorCompra: 98.87,
+  },
+  {
+    codAtivo: 2,
+    codCliente: 1,
+    qtdAtivo: 100,
+    valorCompra: 34.66,
   },
 ];
 
@@ -45,4 +60,5 @@ module.exports = {
   ativo,
   allAtivos,
   getByClientData,
+  modelClientData,
 };
