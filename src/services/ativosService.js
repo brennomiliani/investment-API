@@ -37,7 +37,7 @@ const getAllAssetsAndQuantity = async () => {
 };
 
 const getByClientAndAssets = async ({ codCliente, codAtivo }) => {
-  const [clientAssets] = await CustodiaAtivo.findAll({ where: { codCliente, codAtivo } });
+  const clientAssets = await CustodiaAtivo.findOne({ where: { codCliente, codAtivo } });
   return clientAssets;
 };
 
