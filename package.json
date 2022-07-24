@@ -8,7 +8,8 @@
     "db:start": "npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
     "drop": "npx sequelize-cli db:drop",
     "seed": "npx sequelize-cli db:seed:undo:all && npx sequelize-cli db:seed:all",
-    "start": "npx nodemon ."
+    "heroku": "node .",
+    "start": "npm run heroku"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
     "joi": "^17.6.0",
     "mysql2": "^2.3.3",
     "path": "^0.12.7",
+    "pg": "^8.7.3",
     "sequelize": "^6.21.3",
     "sequelize-cli": "^6.4.1",
     "sequelize-test-helpers": "^1.4.2",

@@ -2,6 +2,7 @@
 
 # Contexto
 Este projeto trata-se de uma ferramenta backEnd para que clientes de uma corretora possam realizar compra e venda de ativos.
+Foi levado em conta que o projeto era apenas para verificação, atualização
 
 ## Tecnologias usadas
 
