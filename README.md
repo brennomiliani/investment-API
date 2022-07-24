@@ -53,3 +53,9 @@ Após clonar o repositório, é necessário decidir se irá executar localmente 
   ```
     npm test
   ```
+
+## Rotas
+
+  > Com o projeto sendo executado é possível acessar a rota do swagger /docs para verificar o que é esperado de cada rota
+
+  ![image](./readmeImgs/swagger-routes.jpeg)
