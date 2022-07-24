@@ -16,8 +16,7 @@ Testes
 
 Após clonar o repositório, é necessário decidir se irá executar localmente ou com docker, o que é mais recomendado por evitar problemas de incompatibilidade de sistemas e versões.
 
-<details>
-  <summary><strong>Rodando no Docker vs Localmente</strong></summary><br />
+  <br><summary><strong>Rodando no Docker vs Localmente</strong></summary><br />
 
   ## Com Docker (recomendado)
 
@@ -45,7 +44,6 @@ Após clonar o repositório, é necessário decidir se irá executar localmente 
   > Finalmente rodar a aplicação com  `npm start`
   
   <br/>
-</details>
 
 ## Executando Testes
 
@@ -55,8 +53,15 @@ Após clonar o repositório, é necessário decidir se irá executar localmente 
     npm test
   ```
 
+## Deploy da API
+
+ > Deploy da API foi feita pelo Heroku: <br>
+  > <a href="https://brenno-investment-api.herokuapp.com/">Acesso à aplicação</a> aconselhável acesso via swagger, como informado abaixo
+
+
 ## Rotas
+  
+  > Com o projeto sendo executado é possível acessar a rota do swagger /docs para verificar o que é esperado de cada rota <br>
+  > <a href="https://brenno-investment-api.herokuapp.com/docs">Acesso á aplicação pelo swagger</a>
 
-  > Com o projeto sendo executado é possível acessar a rota do swagger /docs para verificar o que é esperado de cada rota
-
-  ![image routes](https://github.com/brennomiliani/Desafio-Tecnico-BackEnd/blob/dev/.public/swaggerRoutes.png)
+  ![image routes](https://github.com/brennomiliani/investment-API/blob/main/.public/swaggerRoutes.png?raw=true)
