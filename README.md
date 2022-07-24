@@ -1,7 +1,7 @@
 # Desafio-Técnico-BackEnd
 
 # Contexto
-Este projeto trata-se de uma ferramenta backEnd para que clientes de uma corretora possam fazer suas compras e vendas de ativos.
+Este projeto trata-se de uma ferramenta backEnd para que clientes de uma corretora possam realizar compra e venda de ativos.
 
 ## Tecnologias usadas
 
@@ -20,14 +20,14 @@ Após clonar o repositório, é necessário decidir se irá executar localmente 
 
   ## Com Docker (recomendado)
 
-  > Acessar a pasta onde o repositório foi clonado e iniciar os containers utilizando o comando `docker-compose up -d`.
+  > Acessar o diretório onde o repositório foi clonado e iniciar os containers utilizando o comando `docker-compose up -d`.
 
-  > Utilize o comando `docker exec -it stocks_trade_api bash`.
+  > Utilizar o comando `docker exec -it stocks_trade_api bash`.
   - Ele dará acesso ao terminal interativo do container rodando o nodeJS.
 
-  > Instale as dependências com `npm install`
+  > Instalar as dependências com `npm install`
 
-  > Inicie o banco de dados com `npm run db:start`
+  > Iniciar o banco de dados com `npm run db:start`
 
   > Finalmente rodar a aplicação com  `npm start`
 
@@ -35,11 +35,11 @@ Após clonar o repositório, é necessário decidir se irá executar localmente 
 
   ## Sem Docker
 
-  > Instale as dependências com `npm install`
+  > Instalar as dependências com `npm install`
 
-  > Altere as informações de login do seu usuário MySQL Server dentro do arquivo .env
+  > Alterar as informações de login do seu usuário MySQL Server dentro do arquivo .env
 
-  > Inicie o banco de dados com `npm run db:start`
+  > Iniciar o banco de dados com `npm run db:start`
 
   > Finalmente rodar a aplicação com  `npm start`
   
