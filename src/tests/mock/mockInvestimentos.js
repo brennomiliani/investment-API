@@ -21,8 +21,12 @@ const getByClientAndAssetsData = {
   valorCompra: 100,
 };
 
+const comprarServiceResp = { status: 200, message: 'Compra realizada!' };
+const venderServiceResp = { status: 200, message: 'Venda realizada!' };
+
 module.exports = {
   getByAssetsData,
   getClienteData,
   getByClientAndAssetsData,
+  comprarServiceResp,
 };

@@ -4,7 +4,7 @@ const { CustodiaAtivo, Cliente, Ativo } = require('../../database/models');
 const investimentosService = require('../../services/investimentosService');
 const { getByAssetsData, getClienteData, getByClientAndAssetsData } = require('../mock/mockInvestimentos');
 
-describe.only('testing service layer for investimentos', () => {
+describe('testing service layer for investimentos', () => {
   describe('testing function comprar', () => {
     before(() => {
       sinon.stub(Ativo, 'findOne').resolves(getByAssetsData);
@@ -38,7 +38,7 @@ describe.only('testing service layer for investimentos', () => {
     });
   });
 
-  describe.only('testing function vender', () => {
+  describe('testing function vender', () => {
     before(() => {
       sinon.stub(Ativo, 'findOne').resolves(getByAssetsData);
       sinon.stub(Ativo, 'update').resolves();
