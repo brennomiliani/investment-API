@@ -7,8 +7,12 @@ const swaggerConfig = {
       version: '1.0',
     },
     servers: [{
-      url: 'https://brenno-investment-api.herokuapp.com',
+      url: 'http://localhost:3000',
       description: 'local server',
+    },
+    {
+      url: 'https://brenno-investment-api.herokuapp.com',
+      description: 'Online API',
     }],
   },
   apis: ['./src/routes/contaRoutes.js', './src/routes/ativosRoutes.js', './src/routes/investimentosRoutes.js'],
