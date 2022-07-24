@@ -34,7 +34,13 @@ const getClienteData = {
   bancoSaque: 'itau',
 };
 
+const getClienteControllerData = {
+  codCliente: 1,
+  saldo: 5000,
+};
+
 module.exports = {
   clientes,
   getClienteData,
+  getClienteControllerData,
 };
