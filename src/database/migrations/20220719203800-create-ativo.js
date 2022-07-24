@@ -13,7 +13,7 @@ module.exports = {
       },
       preco: {
         allowNull: false,
-        type: Sequelize.INTEGER,
+        type: Sequelize.FLOAT,
       },
       nome: {
         allowNull: false,

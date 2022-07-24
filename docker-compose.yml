@@ -1,15 +1,15 @@
+version: "3"
 services:
   node:
     image: node:16
-    user: node
-    working_dir: /app
-    volumes:
-      - ./:/app
     container_name: stocks_trade_api
     tty: true
     stdin_open: true
     command: bash
     restart: always
+    working_dir: /app
+    volumes:
+      - ./:/app
     depends_on:
       - db
     ports:
@@ -17,13 +17,16 @@ services:
     environment:
       MYSQL_USER: root
       MYSQL_PASSWORD: password
-      HOSTNAME: db
+      MYSQL_HOST: db
+      PORT: '3000'
   db:
     container_name: stocks_trade_api_db
     image: mysql:8.0.21
     restart: always
     ports:
       - 3306:3306
-      - 33060:33060
     environment:
-      MYSQL_ROOT_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: 'password'
+
+networks:
+  default:
