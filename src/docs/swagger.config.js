@@ -11,7 +11,7 @@ const swaggerConfig = {
       description: 'local server',
     }],
   },
-  apis: ['./src/routes/contaRoutes.js', './src/routes/ativosRoutes.js'],
+  apis: ['./src/routes/contaRoutes.js', './src/routes/ativosRoutes.js', './src/routes/investimentosRoutes.js'],
 };
 
 module.exports = swaggerConfig;
