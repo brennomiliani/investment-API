@@ -5,10 +5,10 @@
   "main": "src/index.js",
   "scripts": {
     "test": "mocha ./src/tests/**/*$NAME*.test.js --exit",
-    "prestart": "npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
+    "db:start": "npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
     "drop": "npx sequelize-cli db:drop",
     "seed": "npx sequelize-cli db:seed:undo:all && npx sequelize-cli db:seed:all",
-    "dev": "npx nodemon ."
+    "start": "npx nodemon ."
   },
   "repository": {
     "type": "git",
