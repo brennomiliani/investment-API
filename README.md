@@ -58,4 +58,4 @@ Após clonar o repositório, é necessário decidir se irá executar localmente 
 
   > Com o projeto sendo executado é possível acessar a rota do swagger /docs para verificar o que é esperado de cada rota
 
-  ![image routes](./public/swaggerRoutes.png)
+  ![image routes](https://github.com/brennomiliani/Desafio-Tecnico-BackEnd/blob/dev/.public/swaggerRoutes.png)
