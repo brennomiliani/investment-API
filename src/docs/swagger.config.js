@@ -7,7 +7,7 @@ const swaggerConfig = {
       version: '1.0',
     },
     servers: [{
-      url: 'http://localhost:3000',
+      url: 'https://brenno-investment-api.herokuapp.com',
       description: 'local server',
     }],
   },
