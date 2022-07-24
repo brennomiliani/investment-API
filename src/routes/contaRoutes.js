@@ -28,12 +28,6 @@ const contaRoutes = express.Router();
  *        example:
  *          codCliente: 1
  *          valor: 1000
- */
-
-/**
- * @swagger
- *  components:
- *    schemas:
  *      TransactionResponse:
  *        type: object
  *        required:
@@ -43,12 +37,6 @@ const contaRoutes = express.Router();
  *            type: float
  *        example:
  *          novoSaldo: 2000
- */
-
-/**
- * @swagger
- *  components:
- *    schemas:
  *      getClientResponse:
  *        type: object
  *        required:
